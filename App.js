@@ -1,13 +1,12 @@
 import React from 'react';
-import {View} from 'react-native';
-import CrossPlatformIcon from 'react-native-cross-platform-icons';
-
+import {Provider} from 'react-redux';
+import {store} from './src/redux/store';
+import RootNavigator from './src/navigation/RootNavigator';
 const App = () => {
   return (
-    <View>
-      <CrossPlatformIcon name="home" size={45} color="black" outline />
-    </View>
+    <Provider store={store}>
+      <RootNavigator />
+    </Provider>
   );
 };
-
 export default App;
